@@ -1,70 +1,593 @@
+---
+const strengths = [
+  {
+    number: "01",
+    title: "Communicatie",
+    text: "Ik breng ideeën duidelijk over, luister naar anderen en gebruik feedback om samen verder te komen.",
+  },
+  {
+    number: "02",
+    title: "Samenwerken",
+    text: "Ik krijg energie van samen denken, taken verdelen en bouwen aan een gezamenlijk resultaat.",
+  },
+  {
+    number: "03",
+    title: "Analytisch denken",
+    text: "Bij een probleem wil ik eerst de oorzaak begrijpen, zodat de oplossing ook echt past.",
+  },
+  {
+    number: "04",
+    title: "Creativiteit",
+    text: "Ik bedenk graag verschillende mogelijkheden en kan goed improviseren wanneer dat nodig is.",
+  },
+  {
+    number: "05",
+    title: "Doorzetten",
+    text: "Wanneer iets niet meteen lukt, blijf ik oefenen, testen en zoeken naar een betere aanpak.",
+  },
+  {
+    number: "06",
+    title: "Nauwkeurig werken",
+    text: "Ik neem de tijd om werk zorgvuldig af te ronden en kwaliteit te bewaken.",
+  },
+];
+
+const research = [
+  {
+    title: "DevOps: het teamperspectief",
+    text: "DevOps laat zien hoe developers, testers en beheerders samenwerken om betrouwbare software te leveren. Dit past bij mijn interesse in samenwerking, kwaliteit en DevOps.",
+    href: "https://learn.microsoft.com/en-us/devops/what-is-devops",
+    source: "Bron: Microsoft Learn ↗",
+  },
+  {
+    title: "UX/UI: het gebruikersperspectief",
+    text: "Goed ontwerp begint bij het begrijpen van gebruikers. Daarom wil ik leren hoe ik feedback en onderzoek kan vertalen naar een duidelijke, gebruiksvriendelijke interface.",
+    href: "https://www.nngroup.com/articles/",
+    source: "Bron: Nielsen Norman Group ↗",
+  },
+  {
+    title: "AI: het maatschappelijke perspectief",
+    text: "AI biedt kansen, maar vraagt ook om veilige en betrouwbare toepassingen. De Europese AI Act helpt mij om naast innovatie ook risico’s en verantwoordelijkheid mee te nemen.",
+    href: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    source: "Bron: Europese Commissie ↗",
+  },
+];
+
+const developmentPlan = [
+  {
+    period: "Sep – dec 2026",
+    title: "Front-end versterken",
+    text: "Ik bouw twee responsive projecten en vraag per project feedback op mijn code en ontwerp.",
+    proof: "Bewijs: links naar projecten en ontvangen feedback.",
+  },
+  {
+    period: "Jan – mrt 2027",
+    title: "UX/UI oefenen",
+    text: "Ik maak een prototype, vraag minimaal drie gebruikers om feedback en verbeter mijn ontwerp op basis van hun input.",
+    proof: "Bewijs: prototype, feedback en verbeterde versie.",
+  },
+  {
+    period: "Apr – jun 2027",
+    title: "DevOps toepassen",
+    text: "Ik leer een project gestructureerd te beheren met Git, testen en een eenvoudige automatische publicatie.",
+    proof: "Bewijs: repository, tests en werkende publicatie.",
+  },
+];
+---
+
 <!doctype html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Persoonlijke website van een creatieve, resultaatgerichte developer in opleiding." />
-  <title>Mijn ontwikkelprofiel</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <a class="logo" href="#top">[ ILKER OCAK ]</a>
-    <nav aria-label="Hoofdnavigatie"><a href="#profiel">Profiel</a><a href="#sterktes">Sterktes</a><a href="#onderzoek">Onderzoek</a><a href="#plan">Plan</a></nav>
-  </header>
-  <main id="top">
-    <section class="hero section">
-      <div class="hero-text">
-        <p class="eyebrow">Ilker Ocak · Developer in opleiding · Rotterdam</p>
-        <h1>Ik bouw ideeën<br /><em>met aandacht.</em></h1>
-        <p class="intro">Ik ben een creatieve en resultaatgerichte developer in opleiding. Ik krijg energie van problemen oplossen, samenwerken en ideeën omzetten in iets dat echt werkt.</p>
-        <div class="hero-actions"><a class="button" href="#profiel">Ontdek mijn profiel <span>↓</span></a><a class="text-link" href="#contact">Neem contact op <span>↗</span></a></div>
-      </div>
-      <figure class="hero-photo"><img src="assets/ilker-ocak.jpeg" alt="Ilker Ocak" /></figure>
-      <div class="hero-note"><span class="pulse"></span>Open voor leren, maken en samenwerken</div>
-    </section>
-    <section id="profiel" class="section profile-grid">
-      <div><p class="eyebrow">01 — Over mij</p><h2>Nieuwsgierig, creatief en gericht op resultaat.</h2></div>
-      <div class="body-copy"><p>Ik ben Ilker Ocak, 22 jaar, geboren en getogen in Rotterdam. Momenteel studeer ik Software Development aan de Hogeschool Rotterdam.</p><p>Ik vind het belangrijk dat werk zichtbaar resultaat oplevert. Daarom combineer ik graag creatief denken met een praktische aanpak: eerst goed begrijpen wat er nodig is, daarna iets maken dat waarde toevoegt.</p><p>Ik werk prettig in een team waar ruimte is voor overleg en brainstormen. Tegelijkertijd kan ik mij zelfstandig goed concentreren en gefocust aan een taak werken.</p></div>
-    </section>
-    <section id="sterktes" class="section">
-      <p class="eyebrow">02 — Mijn sterke punten</p><h2>Wat ik meebreng.</h2>
-      <div class="strengths">
-        <article><span>01</span><h3>Communicatie</h3><p>Ik breng ideeën duidelijk over, luister naar anderen en gebruik feedback om samen verder te komen.</p></article>
-        <article><span>02</span><h3>Samenwerken</h3><p>Ik krijg energie van samen denken, taken verdelen en bouwen aan een gezamenlijk resultaat.</p></article>
-        <article><span>03</span><h3>Analytisch denken</h3><p>Bij een probleem wil ik eerst de oorzaak begrijpen, zodat de oplossing ook echt past.</p></article>
-        <article><span>04</span><h3>Creativiteit</h3><p>Ik bedenk graag verschillende mogelijkheden en kan goed improviseren wanneer dat nodig is.</p></article>
-        <article><span>05</span><h3>Doorzetten</h3><p>Wanneer iets niet meteen lukt, blijf ik oefenen, testen en zoeken naar een betere aanpak.</p></article>
-        <article><span>06</span><h3>Nauwkeurig werken</h3><p>Ik neem de tijd om werk zorgvuldig af te ronden en kwaliteit te bewaken.</p></article>
-      </div>
-    </section>
-    <section class="section split">
-      <div><p class="eyebrow">03 — Zo werk ik graag</p><h2>Samen waar het helpt.<br />Zelfstandig waar het kan.</h2></div>
-      <div class="preference-list"><div><b>Team</b><span>Middelgroot team met veel samenwerking</span></div><div><b>Werksfeer</b><span>Informeel, flexibel en prettig</span></div><div><b>Beslissingen</b><span>Zorgvuldig, met aandacht voor kwaliteit</span></div><div><b>Leren</b><span>Door te doen, met begeleiding uit de praktijk</span></div></div>
-    </section>
-    <section id="ambitie" class="section ambition">
-      <div class="ambition-copy"><p class="eyebrow">04 — Richting & ambitie</p><h2>Technologie die mensen vooruithelpt.</h2><p>Mijn interesses liggen bij front-end development, DevOps en UX/UI. Ik wil mij ontwikkelen in het maken van gebruiksvriendelijke, betrouwbare digitale producten — met oog voor zowel techniek als de gebruiker.</p><div class="tags"><span>Front-end</span><span>DevOps</span><span>UX/UI</span><span>AI</span><span>Gaming</span><span>Mobiliteit</span></div></div>
-      <aside class="role-card"><p class="card-label">Ontwikkelaarstype</p><p class="role">Innovator<span>.</span></p><p>Ik wil nieuwe technologieën verkennen en onderzoeken hoe ze in de praktijk waardevol kunnen zijn.</p></aside>
-    </section>
-    <section id="onderzoek" class="section research">
-      <p class="eyebrow">05 — Onderzoek</p><h2>Ik onderbouw mijn keuzes.</h2>
-      <p class="section-intro">Voor mijn ontwikkeling verdiep ik mij in onderwerpen die passen bij mijn interesses én bij de beroepspraktijk. Daarbij kijk ik naar de gebruiker, het team en de maatschappij.</p>
-      <div class="research-grid">
-        <article><h3>DevOps: het teamperspectief</h3><p>DevOps laat zien hoe developers, testers en beheerders samenwerken om betrouwbare software te leveren. Dit past bij mijn interesse in samenwerking, kwaliteit en DevOps.</p><a href="https://learn.microsoft.com/en-us/devops/what-is-devops" target="_blank" rel="noreferrer">Bron: Microsoft Learn ↗</a></article>
-        <article><h3>UX/UI: het gebruikersperspectief</h3><p>Goed ontwerp begint bij het begrijpen van gebruikers. Daarom wil ik leren hoe ik feedback en onderzoek kan vertalen naar een duidelijke, gebruiksvriendelijke interface.</p><a href="https://www.nngroup.com/articles/" target="_blank" rel="noreferrer">Bron: Nielsen Norman Group ↗</a></article>
-        <article><h3>AI: het maatschappelijke perspectief</h3><p>AI biedt kansen, maar vraagt ook om veilige en betrouwbare toepassingen. De Europese AI Act helpt mij om naast innovatie ook risico’s en verantwoordelijkheid mee te nemen.</p><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noreferrer">Bron: Europese Commissie ↗</a></article>
-      </div>
-    </section>
-    <section id="plan" class="section development">
-      <p class="eyebrow">06 — Ontwikkelplan 2026–2027</p><h2>Van student naar junior developer.</h2>
-      <p class="section-intro"><b>Mijn huidige profiel:</b> creatieve Software Development-student met sterke communicatie en samenwerking. <b>Mijn doel:</b> in juni 2027 een junior developer zijn met een stevige basis in front-end, UX/UI en DevOps.</p>
-      <div class="plan-grid">
-        <article><span>Sep – dec 2026</span><h3>Front-end versterken</h3><p>Ik bouw twee responsive projecten en vraag per project feedback op mijn code en ontwerp.</p><b>Bewijs: links naar projecten en ontvangen feedback.</b></article>
-        <article><span>Jan – mrt 2027</span><h3>UX/UI oefenen</h3><p>Ik maak een prototype, vraag minimaal drie gebruikers om feedback en verbeter mijn ontwerp op basis van hun input.</p><b>Bewijs: prototype, feedback en verbeterde versie.</b></article>
-        <article><span>Apr – jun 2027</span><h3>DevOps toepassen</h3><p>Ik leer een project gestructureerd te beheren met Git, testen en een eenvoudige automatische publicatie.</p><b>Bewijs: repository, tests en werkende publicatie.</b></article>
-      </div>
-    </section>
-  </main>
-  <footer id="contact"><p class="eyebrow">Laten we kennismaken</p><h2>Nieuwsgierig naar wat ik kan maken?</h2><a class="mail" href="mailto:ilkerocak10@hotmail.com">ilkerocak10@hotmail.com <span>↗</span></a><p class="footer-note">Ilker Ocak · Software Development · Hogeschool Rotterdam</p></footer>
-</body>
+<html lang="nl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Persoonlijke website van een creatieve, resultaatgerichte developer in opleiding."
+    />
+
+    <meta name="theme-color" content="#16231d" />
+
+    <title>Mijn ontwikkelprofiel</title>
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-dark: #16231d;
+        --color-light: #f7f5ed;
+        --color-green: #d8f75a;
+        --color-orange: #ff6945;
+        --color-line: #c9c9bb;
+        --color-gray: #59645d;
+      }
+    </style>
+  </head>
+
+  <body class="m-0 bg-light text-dark font-[Arial,sans-serif]">
+    <header
+      class="site-header flex h-[70px] items-center justify-between border-b border-line px-[8%]"
+    >
+      <a
+        class="text-[14px] font-bold text-dark no-underline transition-opacity hover:opacity-60 max-[560px]:text-[11px]"
+        href="#top"
+      >
+        [ ILKER OCAK ]
+      </a>
+
+      <nav
+        aria-label="Hoofdnavigatie"
+        class="flex gap-6 max-[900px]:gap-[13px] max-[560px]:gap-2"
+      >
+        <a
+          class="text-[14px] font-bold text-dark no-underline hover:underline max-[900px]:text-[12px] max-[560px]:text-[11px]"
+          href="#profiel"
+        >
+          Profiel
+        </a>
+
+        <a
+          class="text-[14px] font-bold text-dark no-underline hover:underline max-[900px]:text-[12px] max-[560px]:text-[11px]"
+          href="#sterktes"
+        >
+          Sterktes
+        </a>
+
+        <a
+          class="text-[14px] font-bold text-dark no-underline hover:underline max-[900px]:text-[12px] max-[560px]:text-[11px]"
+          href="#onderzoek"
+        >
+          Onderzoek
+        </a>
+
+        <a
+          class="text-[14px] font-bold text-dark no-underline hover:underline max-[900px]:text-[12px] max-[560px]:text-[11px]"
+          href="#plan"
+        >
+          Plan
+        </a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section
+        class="relative isolate grid min-h-[calc(100vh-70px)] grid-cols-[minmax(0,1fr)_minmax(240px,320px)] items-center gap-[50px] overflow-hidden border-b border-line px-[12%] py-[100px] max-[900px]:grid-cols-[minmax(0,1fr)_220px] max-[900px]:gap-[25px] max-[900px]:px-5 max-[900px]:py-[65px] max-[900px]:min-h-[620px] max-[560px]:grid-cols-1 max-[560px]:gap-8 max-[560px]:py-[50px]"
+      >
+        <div
+          class="absolute right-[5%] bottom-[9%] -z-10 h-[340px] w-[340px] rounded-full bg-green max-[900px]:right-0 max-[900px]:h-[250px] max-[900px]:w-[250px] max-[560px]:right-[-50px] max-[560px]:bottom-[35px]"
+          aria-hidden="true"
+        ></div>
+
+        <div>
+          <p
+            class="mb-4 text-[12px] font-bold uppercase tracking-[1px] text-gray"
+          >
+            Ilker Ocak · Developer in opleiding · Rotterdam
+          </p>
+
+          <h1
+            class="mb-7 max-w-[700px] text-[clamp(56px,8vw,120px)] font-bold leading-[0.9] tracking-[-5px] max-[900px]:text-[58px] max-[900px]:tracking-[-3px]"
+          >
+            Ik bouw ideeën<br />
+            <em class="not-italic text-orange">met aandacht.</em>
+          </h1>
+
+          <p
+            class="mb-0 max-w-[600px] text-[18px] leading-[1.6] text-[#3f4944]"
+          >
+            Ik ben een creatieve en resultaatgerichte developer in opleiding.
+            Ik krijg energie van problemen oplossen, samenwerken en ideeën
+            omzetten in iets dat echt werkt.
+          </p>
+
+          <div class="mt-5 flex flex-wrap items-center gap-7">
+            <a
+              href="#profiel"
+              class="bg-dark px-[18px] py-[14px] text-[14px] text-white no-underline transition-transform hover:-translate-y-0.5"
+            >
+              Ontdek mijn profiel <span aria-hidden="true">↓</span>
+            </a>
+
+            <a
+              href="#contact"
+              class="text-[14px] text-dark no-underline hover:underline"
+            >
+              Neem contact op <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <figure
+          class="mb-0 h-[390px] w-full self-end overflow-hidden rounded-t-[150px] border-4 border-light shadow-[9px_9px_0_#ff6945] max-[900px]:h-[295px] max-[900px]:border-[3px] max-[900px]:shadow-[6px_6px_0_#ff6945] max-[560px]:h-[285px] max-[560px]:w-[210px] max-[560px]:justify-self-end"
+        >
+          <img
+            src="/assets/ilker-ocak.jpeg"
+            alt="Ilker Ocak"
+            class="h-full w-full object-cover object-top"
+          />
+        </figure>
+
+        <div
+          class="col-span-full self-end text-[12px] text-gray max-[560px]:col-auto"
+        >
+          <span
+            class="mr-[7px] inline-block h-[9px] w-[9px] rounded-full bg-orange align-middle"
+            aria-hidden="true"
+          ></span>
+          Open voor leren, maken en samenwerken
+        </div>
+      </section>
+
+      <!-- PROFIEL -->
+      <section
+        id="profiel"
+        class="grid grid-cols-2 gap-[10%] border-b border-line px-[12%] py-[100px] max-[900px]:grid-cols-1 max-[900px]:gap-[35px] max-[900px]:px-5 max-[900px]:py-[65px]"
+      >
+        <div>
+          <p
+            class="mb-4 text-[12px] font-bold uppercase tracking-[1px] text-gray"
+          >
+            01 — Over mij
+          </p>
+
+          <h2
+            class="mb-0 text-[clamp(36px,5vw,68px)] font-bold leading-none tracking-[-3px] max-[900px]:tracking-[-2px]"
+          >
+            Nieuwsgierig, creatief en gericht op resultaat.
+          </h2>
+        </div>
+
+        <div class="text-[17px] leading-[1.7] text-[#3f4944]">
+          <p>
+            Ik ben Ilker Ocak, 22 jaar, geboren en getogen in Rotterdam.
+            Momenteel studeer ik Software Development aan de Hogeschool
+            Rotterdam.
+          </p>
+
+          <p>
+            Ik vind het belangrijk dat werk zichtbaar resultaat oplevert.
+            Daarom combineer ik graag creatief denken met een praktische
+            aanpak: eerst goed begrijpen wat er nodig is, daarna iets maken
+            dat waarde toevoegt.
+          </p>
+
+          <p class="mb-0">
+            Ik werk prettig in een team waar ruimte is voor overleg en
+            brainstormen. Tegelijkertijd kan ik mij zelfstandig goed
+            concentreren en gefocust aan een taak werken.
+          </p>
+        </div>
+      </section>
+
+      <!-- STERKTES -->
+      <section
+        id="sterktes"
+        class="border-b border-line px-[12%] py-[100px] max-[900px]:px-5 max-[900px]:py-[65px]"
+      >
+        <p
+          class="mb-4 text-[12px] font-bold uppercase tracking-[1px] text-gray"
+        >
+          02 — Mijn sterke punten
+        </p>
+
+        <h2
+          class="mb-0 text-[clamp(36px,5vw,68px)] font-bold leading-none tracking-[-3px] max-[900px]:tracking-[-2px]"
+        >
+          Wat ik meebreng.
+        </h2>
+
+        <div
+          class="mt-[45px] grid grid-cols-3 border-t border-line max-[900px]:mt-[30px] max-[900px]:grid-cols-1"
+        >
+          {
+            strengths.map((strength, index) => (
+              <article
+                class:list={[
+                  "min-h-[220px] border-b border-r border-line p-[22px]",
+                  (index + 1) % 3 === 0 && "border-r-0",
+                  "max-[900px]:min-h-0 max-[900px]:border-r-0 max-[900px]:px-0 max-[900px]:py-4 max-[900px]:grid max-[900px]:grid-cols-[35px_150px_1fr] max-[900px]:gap-[10px] max-[900px]:items-start",
+                  "max-[560px]:grid-cols-[28px_1fr] max-[560px]:gap-x-[10px] max-[560px]:gap-y-1",
+                ]}
+              >
+                <span class="text-[12px] font-bold text-orange">
+                  {strength.number}
+                </span>
+
+                <h3
+                  class:list={[
+                    "mt-[52px] mb-0 text-[20px] font-bold",
+                    "max-[900px]:m-0",
+                    "max-[560px]:m-0",
+                  ]}
+                >
+                  {strength.title}
+                </h3>
+
+                <p
+                  class:list={[
+                    "mb-0 text-[15px] leading-[1.6] text-gray",
+                    "max-[900px]:m-0",
+                    "max-[560px]:col-start-2",
+                  ]}
+                >
+                  {strength.text}
+                </p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- WERKWIJZE -->
+      <section
+        class="grid grid-cols-2 gap-[10%] border-b border-line px-[12%] py-[100px] max-[900px]:grid-cols-1 max-[900px]:gap-[35px] max-[900px]:px-5 max-[900px]:py-[65px]"
+      >
+        <div>
+          <p
+            class="mb-4 text-[12px] font-bold uppercase tracking-[1px] text-gray"
+          >
+            03 — Zo werk ik graag
+          </p>
+
+          <h2
+            class="mb-0 text-[clamp(36px,5vw,68px)] font-bold leading-none tracking-[-3px] max-[900px]:tracking-[-2px]"
+          >
+            Samen waar het helpt.<br />
+            Zelfstandig waar het kan.
+          </h2>
+        </div>
+
+        <div class="border-t border-dark">
+          <div class="border-b border-line py-[17px]">
+            <b class="mb-[5px] block text-[13px]">Team</b>
+            <span class="block text-gray">
+              Middelgroot team met veel samenwerking
+            </span>
+          </div>
+
+          <div class="border-b border-line py-[17px]">
+            <b class="mb-[5px] block text-[13px]">Werksfeer</b>
+            <span class="block text-gray">
+              Informeel, flexibel en prettig
+            </span>
+          </div>
+
+          <div class="border-b border-line py-[17px]">
+            <b class="mb-[5px] block text-[13px]">Beslissingen</b>
+            <span class="block text-gray">
+              Zorgvuldig, met aandacht voor kwaliteit
+            </span>
+          </div>
+
+          <div class="border-b border-line py-[17px]">
+            <b class="mb-[5px] block text-[13px]">Leren</b>
+            <span class="block text-gray">
+              Door te doen, met begeleiding uit de praktijk
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- AMBITIE -->
+      <section
+        id="ambitie"
+        class="grid grid-cols-[2fr_1fr] gap-[10%] border-b border-line bg-dark px-[12%] py-[100px] text-light max-[900px]:grid-cols-1 max-[900px]:gap-[35px] max-[900px]:px-5 max-[900px]:py-[65px]"
+      >
+        <div>
+          <p
+            class="mb-4 text-[12px] font-bold uppercase tracking-[1px] text-[#c9d0c7]"
+          >
+            04 — Richting & ambitie
+          </p>
+
+          <h2
+            class="mb-0 text-[clamp(36px,5vw,68px)] font-bold leading-none tracking-[-3px] max-[900px]:tracking-[-2px]"
+          >
+            Technologie die mensen vooruithelpt.
+          </h2>
+
+          <p
+            class="my-[25px] max-w-[600px] leading-[1.7] text-[#c9d0c7]"
+          >
+            Mijn interesses liggen bij front-end development, DevOps en UX/UI.
+            Ik wil mij ontwikkelen in het maken van gebruiksvriendelijke,
+            betrouwbare digitale producten — met oog voor zowel techniek als
+            de gebruiker.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <span
+              class="rounded-full border border-[#718071] px-[11px] py-[7px] text-[12px]"
+            >
+              Front-end
+            </span>
+
+            <span
+              class="rounded-full border border-[#718071] px-[11px] py-[7px] text-[12px]"
+            >
+              DevOps
+            </span>
+
+            <span
+              class="rounded-full border border-[#718071] px-[11px] py-[7px] text-[12px]"
+            >
+              UX/UI
+            </span>
+
+            <span
+              class="rounded-full border border-[#718071] px-[11px] py-[7px] text-[12px]"
+            >
+              AI
+            </span>
+
+            <span
+              class="rounded-full border border-[#718071] px-[11px] py-[7px] text-[12px]"
+            >
+              Gaming
+            </span>
+
+            <span
+              class="rounded-full border border-[#718071] px-[11px] py-[7px] text-[12px]"
+            >
+              Mobiliteit
+            </span>
+          </div>
+        </div>
+
+        <aside class="self-end bg-green p-[30px] text-dark">
+          <p class="text-[12px] font-bold uppercase tracking-[1px]">
+            Ontwikkelaarstype
+          </p>
+
+          <p
+            class="my-[35px] mb-3 text-[50px] font-bold leading-none tracking-[-3px]"
+          >
+            Innovator<span class="text-orange">.</span>
+          </p>
+
+          <p class="mb-0 leading-[1.6]">
+            Ik wil nieuwe technologieën verkennen en onderzoeken hoe ze in de
+            praktijk waardevol kunnen zijn.
+          </p>
+        </aside>
+      </section>
+
+      <!-- ONDERZOEK -->
+      <section
+        id="onderzoek"
+        class="border-b border-line px-[12%] py-[100px] max-[900px]:px-5 max-[900px]:py-[65px]"
+      >
+        <p
+          class="mb-4 text-[12px] font-bold uppercase tracking-[1px] text-gray"
+        >
+          05 — Onderzoek
+        </p>
+
+        <h2
+          class="mb-0 text-[clamp(36px,5vw,68px)] font-bold leading-none tracking-[-3px] max-[900px]:tracking-[-2px]"
+        >
+          Ik onderbouw mijn keuzes.
+        </h2>
+
+        <p
+          class="my-[25px] mb-[35px] max-w-[760px] leading-[1.7] text-gray"
+        >
+          Voor mijn ontwikkeling verdiep ik mij in onderwerpen die passen bij
+          mijn interesses én bij de beroepspraktijk. Daarbij kijk ik naar de
+          gebruiker, het team en de maatschappij.
+        </p>
+
+        <div
+          class="grid grid-cols-3 gap-[18px] max-[900px]:grid-cols-1 max-[900px]:gap-3"
+        >
+          {
+            research.map((item) => (
+              <article class="border border-line p-[22px]">
+                <h3 class="mb-[10px] text-[20px] font-bold">
+                  {item.title}
+                </h3>
+
+                <p class="mb-4 text-[15px] leading-[1.6] text-gray">
+                  {item.text}
+                </p>
+
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text-[13px] font-bold text-dark hover:underline"
+                >
+                  {item.source}
+                </a>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- ONTWIKKELPLAN -->
+      <section
+        id="plan"
+        class="border-b border-line px-[12%] py-[100px] max-[900px]:px-5 max-[900px]:py-[65px]"
+      >
+        <p
+          class="mb-4 text-[12px] font-bold uppercase tracking-[1px] text-gray"
+        >
+          06 — Ontwikkelplan 2026–2027
+        </p>
+
+        <h2
+          class="mb-0 text-[clamp(36px,5vw,68px)] font-bold leading-none tracking-[-3px] max-[900px]:tracking-[-2px]"
+        >
+          Van student naar junior developer.
+        </h2>
+
+        <p
+          class="my-[25px] mb-[35px] max-w-[760px] leading-[1.7] text-gray"
+        >
+          <b class="text-dark">Mijn huidige profiel:</b> creatieve Software
+          Development-student met sterke communicatie en samenwerking.
+          <b class="text-dark">Mijn doel:</b> in juni 2027 een junior developer
+          zijn met een stevige basis in front-end, UX/UI en DevOps.
+        </p>
+
+        <div
+          class="grid grid-cols-3 gap-[18px] max-[900px]:grid-cols-1 max-[900px]:gap-3"
+        >
+          {
+            developmentPlan.map((item) => (
+              <article class="border border-line p-[22px]">
+                <span class="text-[12px] font-bold text-orange">
+                  {item.period}
+                </span>
+
+                <h3 class="mb-[10px] mt-[22px] text-[20px] font-bold">
+                  {item.title}
+                </h3>
+
+                <p class="mb-4 text-[15px] leading-[1.6] text-gray">
+                  {item.text}
+                </p>
+
+                <b class="block text-[13px] leading-[1.5]">
+                  {item.proof}
+                </b>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      id="contact"
+      class="bg-orange px-[12%] pb-[25px] pt-[100px] text-[#231914] max-[900px]:px-5 max-[900px]:py-[65px]"
+    >
+      <p
+        class="mb-4 text-[12px] font-bold uppercase tracking-[1px] text-[#5b2d20]"
+      >
+        Laten we kennismaken
+      </p>
+
+      <h2
+        class="mb-[15px] max-w-[600px] text-[35px] font-bold leading-none tracking-[-2px]"
+      >
+        Nieuwsgierig naar wat ik kan maken?
+      </h2>
+
+      <a
+        class="text-[clamp(18px,3vw,26px)] text-[#231914] no-underline border-b-2 border-[#231914] hover:opacity-70"
+        href="mailto:ilkerocak10@hotmail.com"
+      >
+        ilkerocak10@hotmail.com <span aria-hidden="true">↗</span>
+      </a>
+
+      <p class="mt-[90px] mb-0 text-[12px] text-[#5b2d20] max-[900px]:mt-[60px]">
+        Ilker Ocak · Software Development · Hogeschool Rotterdam
+      </p>
+    </footer>
+  </body>
 </html>
